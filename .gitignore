@@ -1,0 +1,12 @@
+# Jekyll 本地产物
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.jekyll-seo-data
+
+# 依赖与系统
+vendor/
+node_modules/
+.DS_Store
+Thumbs.db

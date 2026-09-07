@@ -1,0 +1,18 @@
+---
+layout: page
+title: 算法
+permalink: /algorithms/
+---
+
+<p class="page-desc">排序、查找、递归与分治、动态规划、贪心、图论等算法的思路、实现与复杂度。</p>
+
+<ul class="post-list">
+  {% for post in site.categories.algorithms reversed %}
+  <li>
+    <span class="date">{{ post.date | date: '%Y-%m-%d' }}</span>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </li>
+  {% else %}
+  <li class="empty">暂无文章，敬请期待。</li>
+  {% endfor %}
+</ul>

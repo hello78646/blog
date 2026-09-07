@@ -1,0 +1,18 @@
+---
+layout: page
+title: C 语言基础
+permalink: /c-basics/
+---
+
+<p class="page-desc">数据类型的理解、指针、内存管理、函数与作用域、预处理等 C 语言核心知识。</p>
+
+<ul class="post-list">
+  {% for post in site.categories.c-basics reversed %}
+  <li>
+    <span class="date">{{ post.date | date: '%Y-%m-%d' }}</span>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </li>
+  {% else %}
+  <li class="empty">暂无文章，敬请期待。</li>
+  {% endfor %}
+</ul>

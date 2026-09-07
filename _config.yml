@@ -1,0 +1,31 @@
+title: 我的技术学习博客
+description: 记录我在 C 语言、数据结构、算法学习路上，对每一个知识点的理解与沉淀。
+
+# 项目页部署在 hello78646.github.io/blog/
+url: "https://hello78646.github.io"
+baseurl: "/blog"
+lang: zh-CN
+
+# 构建配置
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  auto_ids: true
+highlighter: rouge
+
+# 三大知识分区的显示名（用于导航与分类页标题）
+category_names:
+  c-basics: C 语言基础
+  data-structures: 数据结构
+  algorithms: 算法
+
+# 构建时排除，避免把本地产物提交上去
+exclude:
+  - README.md
+  - .gitignore
+  - vendor
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - .jekyll-cache

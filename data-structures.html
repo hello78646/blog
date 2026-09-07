@@ -1,0 +1,18 @@
+---
+layout: page
+title: 数据结构
+permalink: /data-structures/
+---
+
+<p class="page-desc">线性表、栈与队列、串、树、图、散列表等经典数据结构的原理与实现。</p>
+
+<ul class="post-list">
+  {% for post in site.categories.data-structures reversed %}
+  <li>
+    <span class="date">{{ post.date | date: '%Y-%m-%d' }}</span>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </li>
+  {% else %}
+  <li class="empty">暂无文章，敬请期待。</li>
+  {% endfor %}
+</ul>

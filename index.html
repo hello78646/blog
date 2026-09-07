@@ -1,0 +1,41 @@
+---
+layout: default
+title: 首页
+---
+<section class="hero">
+  <h1>欢迎来到我的技术学习博客</h1>
+  <p>记录我在 <strong>C 语言</strong>、<strong>数据结构</strong>、<strong>算法</strong> 学习路上，对每一个知识点的理解与沉淀。</p>
+</section>
+
+<section class="category-grid">
+  <a class="category-card" href="{{ '/c-basics/' | relative_url }}">
+    <h2>C 语言基础</h2>
+    <p>变量、指针、内存、函数、预处理…</p>
+    <span class="count">{{ site.categories.c-basics | size }} 篇</span>
+  </a>
+  <a class="category-card" href="{{ '/data-structures/' | relative_url }}">
+    <h2>数据结构</h2>
+    <p>线性表、栈队列、树、图、散列表…</p>
+    <span class="count">{{ site.categories.data-structures | size }} 篇</span>
+  </a>
+  <a class="category-card" href="{{ '/algorithms/' | relative_url }}">
+    <h2>算法</h2>
+    <p>排序、查找、递归、动态规划、贪心…</p>
+    <span class="count">{{ site.categories.algorithms | size }} 篇</span>
+  </a>
+</section>
+
+<section class="recent">
+  <h2 class="section-title">最新文章</h2>
+  <ul class="post-list">
+    {% for post in site.posts limit: 10 %}
+    <li>
+      <span class="date">{{ post.date | date: '%Y-%m-%d' }}</span>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <span class="cat">{{ post.categories | join: ' / ' }}</span>
+    </li>
+    {% else %}
+    <li class="empty">还没有文章，下一篇知识理解即将发布。</li>
+    {% endfor %}
+  </ul>
+</section>
