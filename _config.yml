@@ -20,6 +20,24 @@ category_names:
   data-structures: 数据结构
   algorithms: 算法
 
+# C 语言基础 · 模块目录（按顺序展示，tag 用于匹配归组对应文章）
+c_modules:
+  - name: 项目实战 · 扫雷
+    tag: 项目实战
+    desc: 综合运用分支、循环、函数嵌套、数组与矩阵思维的小项目。
+  - name: 指针
+    tag: 指针
+    desc: 从地址本质到 const、野指针、数组指针、函数指针、回调函数与 qsort。
+  - name: 字符串处理
+    tag: 字符串
+    desc: 字符分类/转换函数，以及 strlen、strcpy、strcat、strcmp、strstr 等字符串函数。
+  - name: 内存函数
+    tag: 内存函数
+    desc: memcpy、memmove、memset、memcmp 等按字节操作内存的函数。
+  - name: 数据在内存中的存储
+    tag: 内存
+    desc: 整数原反补、大小端字节序、IEEE754 浮点数存储。
+
 # 构建时排除，避免把本地产物提交上去
 exclude:
   - README.md

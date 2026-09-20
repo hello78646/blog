@@ -1,0 +1,29 @@
+---
+layout: page
+title: C 语言基础 · 模块目录
+permalink: /c-basics/modules/
+---
+
+<p class="page-desc">按学习模块归组 C 语言基础的知识点，每个模块下是已整理发布的理解笔记。</p>
+
+<div class="module-list">
+  {% assign cposts = site.categories.c-basics reversed %}
+  {% for mod in site.c_modules %}
+  <section class="module-block">
+    <h2 class="module-title"><span class="module-no">{{ forloop.index }}</span>{{ mod.name }}</h2>
+    <p class="module-desc">{{ mod.desc }}</p>
+    <ul class="post-list">
+      {% for post in cposts %}
+        {% if post.tags contains mod.tag %}
+        <li>
+          <span class="date">{{ post.date | date: '%Y-%m-%d' }}</span>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+</div>
+
+<p class="module-footer"><a href="{{ '/c-basics/' | relative_url }}">查看全部 C 语言基础文章 →</a></p>
